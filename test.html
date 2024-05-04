@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar with Sliding Submenus</title>
+    <style>
+      /* Styles for the navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        color: #fff;
+        position: relative;
+      }
+      .navbar-brand {
+        font-size: 24px;
+      }
+      .menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+      }
+      .menu {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .menu li {
+        margin-right: 20px;
+      }
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+      }
+      .submenu.active {
+        transform: translateX(0);
+      }
+      .submenu li {
+        margin: 5px 0;
+        padding: 0 20px;
+      }
+
+      /* Media query for mobile devices */
+      @media (min-width: 768px) {
+        .menu {
+          display: block;
+        }
+        .menu-icon {
+          display: none;
+        }
+        .submenu {
+          position: static;
+          display: block;
+          transform: none;
+        }
+        .menu.active {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 60px; /* Adjust as needed based on your navbar height */
+          left: 0;
+          background-color: #333;
+          width: 100%;
+          padding: 10px;
+          z-index: 1000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-brand">Your Logo</div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li class="submenu">
+          <a href="#" onclick="toggleSubMenu(event)">About</a>
+          <ul>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">Team</a></li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#" onclick="toggleSubMenu(event)">Services</a>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Mobile App</a></li>
+            <li><a href="#">SEO</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu");
+        menu.classList.toggle("active");
+      }
+
+      function toggleSubMenu(event) {
+        const submenu = event.target.nextElementSibling;
+        submenu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

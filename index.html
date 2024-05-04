@@ -15,25 +15,25 @@
   <body>
     <header class="header">
       <div class="navbar | container">
-        <div class="d-lg-none">
-          <button class="icon-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
-                fill="#222529"
-              ></path>
-            </svg>
-          </button>
-          <!-- <a href="#"
+        <!-- <div class="d-lg-none"> -->
+        <button class="navbar-toggle icon-btn d-lg-none" data-toggle="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
+              fill="#222529"
+            ></path>
+          </svg>
+        </button>
+        <!-- <a href="#"
             ><img width="1rem" height="1rem" src="assets/images/search-outline.svg" alt="Search icon"
           /></a> -->
-        </div>
+        <!-- </div> -->
 
         <a href="/" class="nav-logo">EWM</a>
 
@@ -109,7 +109,7 @@
                 </div>
 
                 <div class="dropdown-item">
-                  <h4>Other</h4>
+                  <h4 class="mb-12">Other</h4>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Kosher Wines</a></li>
                     <li><a href="#" class="nav-link">Sweet Wines</a></li>
@@ -117,7 +117,7 @@
                     <li><a href="#" class="nav-link">Recent Features</a></li>
                   </ul>
                 </div>
-                <div>
+                <div class="dropdown-item">
                   <h4 class="mb-12">Popular White Grapes</h4>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Chardonnay</a></li>
@@ -148,7 +148,7 @@
                   </ul>
                 </div>
 
-                <div>
+                <div class="dropdown-item">
                   <h4>Merchant's Picks</h4>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Recent Features</a></li>
@@ -284,8 +284,70 @@
                 </div>
               </div>
             </li>
+            <li>
+              <ul class="list-unstyled d-lg-none my-12">
+                <li class="mb-12">
+                  <span class="d-flex align-items-center">
+                    <svg
+                      class="d-lg-none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_757_2884)">
+                        <path
+                          d="M3.19717 1.16195C3.14552 1.09551 3.08032 1.04081 3.0059 1.0015C2.93148 0.962188 2.84955 0.939161 2.76555 0.933947C2.68155 0.928733 2.5974 0.941452 2.5187 0.971259C2.43999 1.00107 2.36852 1.04728 2.30905 1.10683L1.4043 2.01245C0.981674 2.43595 0.825924 3.03533 1.01055 3.5612C1.77682 5.73784 3.02331 7.71404 4.65755 9.3432C6.28673 10.9774 8.26292 12.2239 10.4395 12.9902C10.9654 13.1748 11.5648 13.0191 11.9883 12.5965L12.893 11.6917C12.9526 11.6322 12.9988 11.5608 13.0286 11.4821C13.0584 11.4033 13.0711 11.3192 13.0659 11.2352C13.0607 11.1512 13.0377 11.0693 12.9984 10.9949C12.9591 10.9204 12.9044 10.8552 12.8379 10.8036L10.8193 9.23383C10.7483 9.17877 10.6657 9.14055 10.5778 9.12206C10.4899 9.10357 10.399 9.10528 10.3118 9.12708L8.39555 9.6057C8.13977 9.66963 7.87179 9.66624 7.61771 9.59586C7.36363 9.52548 7.1321 9.3905 6.94567 9.20408L4.79667 7.0542C4.6101 6.86786 4.47496 6.63637 4.40442 6.38229C4.33389 6.1282 4.33035 5.86018 4.39417 5.60433L4.87367 3.68808C4.89547 3.60092 4.89718 3.50996 4.87869 3.42205C4.8602 3.33413 4.82198 3.25157 4.76692 3.18058L3.19717 1.16195ZM1.64842 0.447078C1.80154 0.293909 1.9855 0.175067 2.18807 0.098444C2.39064 0.021821 2.6072 -0.0108299 2.82336 0.00265936C3.03952 0.0161486 3.25033 0.0754693 3.44181 0.176683C3.63328 0.277896 3.80103 0.418686 3.93392 0.589703L5.50367 2.60745C5.79155 2.97758 5.89305 3.4597 5.7793 3.9147L5.30067 5.83095C5.27593 5.9302 5.27726 6.03417 5.30455 6.13275C5.33184 6.23133 5.38416 6.32118 5.45642 6.39358L7.6063 8.54345C7.67878 8.61586 7.76878 8.66827 7.86753 8.69556C7.96628 8.72285 8.07042 8.72411 8.1698 8.6992L10.0852 8.22058C10.3097 8.16444 10.5441 8.16008 10.7705 8.20783C10.997 8.25558 11.2097 8.35419 11.3924 8.4962L13.4102 10.066C14.1355 10.6303 14.202 11.7022 13.5528 12.3506L12.648 13.2553C12.0005 13.9028 11.0328 14.1872 10.1307 13.8696C7.82171 13.0572 5.72529 11.7353 3.99692 10.0021C2.2638 8.27397 0.941956 6.17786 0.129424 3.8692C-0.187326 2.96795 0.0970488 1.99933 0.744549 1.35183L1.6493 0.447078H1.64842Z"
+                          fill="#B7926A"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_757_2884">
+                          <rect width="14" height="14" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <a class="clr-dark" href="tel:877-568-8820">877-568-8820</a>
+                    <span class="separator">/</span>
+                    <a class="clr-dark" href="tel:201-568-8820">201-568-8820</a>
+                  </span>
+                </li>
+                <li>
+                  <div class="d-flex">
+                    <svg
+                      class="d-lg-none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_757_2883)">
+                        <path
+                          d="M12.166 8.94C11.642 10.002 10.932 11.06 10.206 12.01C9.5173 12.9056 8.7809 13.7635 8 14.58C7.21908 13.7635 6.48268 12.9056 5.794 12.01C5.068 11.06 4.358 10.002 3.834 8.94C3.304 7.867 3 6.862 3 6C3 4.67392 3.52678 3.40215 4.46447 2.46447C5.40215 1.52678 6.67392 1 8 1C9.32608 1 10.5979 1.52678 11.5355 2.46447C12.4732 3.40215 13 4.67392 13 6C13 6.862 12.695 7.867 12.166 8.94ZM8 16C8 16 14 10.314 14 6C14 4.4087 13.3679 2.88258 12.2426 1.75736C11.1174 0.632141 9.5913 0 8 0C6.4087 0 4.88258 0.632141 3.75736 1.75736C2.63214 2.88258 2 4.4087 2 6C2 10.314 8 16 8 16Z"
+                          fill="#B7926A"
+                        ></path>
+                        <path
+                          d="M8 8C7.46957 8 6.96086 7.78929 6.58579 7.41421C6.21071 7.03914 6 6.53043 6 6C6 5.46957 6.21071 4.96086 6.58579 4.58579C6.96086 4.21071 7.46957 4 8 4C8.53043 4 9.03914 4.21071 9.41421 4.58579C9.78929 4.96086 10 5.46957 10 6C10 6.53043 9.78929 7.03914 9.41421 7.41421C9.03914 7.78929 8.53043 8 8 8ZM8 9C8.79565 9 9.55871 8.68393 10.1213 8.12132C10.6839 7.55871 11 6.79565 11 6C11 5.20435 10.6839 4.44129 10.1213 3.87868C9.55871 3.31607 8.79565 3 8 3C7.20435 3 6.44129 3.31607 5.87868 3.87868C5.31607 4.44129 5 5.20435 5 6C5 6.79565 5.31607 7.55871 5.87868 8.12132C6.44129 8.68393 7.20435 9 8 9Z"
+                          fill="#B7926A"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_757_2883">
+                          <rect width="16" height="16" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <a class="clr-dark" href="#">
+                      One Engle Street, Englewood, NJ 07631
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </li>
           </ul>
-          <ul class="nav--header">
+          <ul class="nav--header d-sm-none">
             <li>
               <a href="#" class="nav-link"
                 ><img src="assets/images/search.svg" alt=""
@@ -543,6 +605,50 @@
               <a href="" class="btn btn-outline-primary">View more</a>
             </div>
           </div>
+        </section>
+        <section class="promo">
+          <ul class="promo__list | list-unstyled">
+            <li>
+              <div class="card bg-light">
+                <img
+                  class="card__img"
+                  src="assets/images/gift-card.webp"
+                  alt="engle wood gift-card"
+                />
+                <div class="p-24">
+                  <h3 class="subtitle text-bold">E-Gift Card</h3>
+                  <p class="card__text">
+                    Barolo, Brunello, Burgundy, Bordeaux, and even Olive Oil -
+                    there are so many options and so many personal preferences.
+                    Let your recipient decide what he or she prefers with an
+                    Englewood Wine Merchants e-gift card.
+                  </p>
+                  <a href="" class="text-btn text-btn-primary">Learn more</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card bg-light">
+                <img
+                  class="card__img"
+                  src="assets/images/corportae-concierge.webp"
+                  alt="engle wood gift-card"
+                />
+                <div class="p-24">
+                  <h3 class="subtitle text-bold">
+                    Corporate Concierge & Gifting
+                  </h3>
+                  <p class="card__text">
+                    Sending several gifts? Our corporate gifting team is here to
+                    help. From Napa Valey to the hills of Tuscany, we can
+                    customize your gifts whether you are sending to corporate
+                    clients, colleagues, friends, or loved ones.
+                  </p>
+                  <a href="" class="text-btn text-btn-primary">Learn more</a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </section>
         <section id="featured">
           <img
@@ -821,6 +927,7 @@
             />
           </div>
         </section>
+
         <section id="location">
           <div class="location_text p-16 bg-dark text-center">
             <svg
@@ -1025,5 +1132,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
