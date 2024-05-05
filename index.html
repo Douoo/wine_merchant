@@ -30,9 +30,14 @@
             ></path>
           </svg>
         </button>
-        <!-- <a href="#"
-            ><img width="1rem" height="1rem" src="assets/images/search-outline.svg" alt="Search icon"
-          /></a> -->
+        <!-- <a href="#">
+          <img
+            width="1rem"
+            height="1rem"
+            src="assets/images/search-outline.svg"
+            alt="Search icon"
+          />
+        </a> -->
         <!-- </div> -->
 
         <a href="/" class="nav-logo">EWM</a>
@@ -58,6 +63,7 @@
         </div>
 
         <nav class="nav">
+          <button class="back-btn hidden d-lg-none">Back</button>
           <ul class="nav--header nav-dropdown">
             <li>
               <button class="dropdown-btn" data-shop="">
@@ -77,11 +83,28 @@
                   ></path>
                 </svg>
               </button>
-              <div class="dropdown-list" data-shop-list="">
+              <div class="dropdown-list">
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Popular Red Grapes</h4>
-                  <ul class="nav-list">
-                    <li><a href="#" class="nav-link">Cabernet Sauvignon</a></li>
+                  <a href="#" class="submenu mb-12">Popular Red Grapes </a>
+                  <ul class="nav-list" data-popular="">
+                    <li>
+                      <a href="#" class="nav-link"
+                        >Cabernet Sauvignon
+                        <svg
+                          class="icon-down"
+                          aria-hidden="true"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 28 16"
+                        >
+                          <path
+                            fill="none"
+                            stroke="#000"
+                            stroke-width="2.75"
+                            d="m1.57 1.59 12.76 12.77L27.1 1.59"
+                          ></path></svg
+                      ></a>
+                    </li>
                     <li><a href="#" class="nav-link">Pinot Noir</a></li>
                     <li><a href="#" class="nav-link">Sangiovese</a></li>
                     <li><a href="#" class="nav-link">Nebbiolo</a></li>
@@ -90,7 +113,7 @@
                 </div>
 
                 <div class="dropdown-item">
-                  <h4 class="mb-12">All Wines</h4>
+                  <a href="#" class="submenu mb-12">All Wines</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Red Wines</a></li>
                     <li><a href="#" class="nav-link">White Wines</a></li>
@@ -98,7 +121,7 @@
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">New World Wines</h4>
+                  <a href="#" class="submenu mb-12">New World Wines</a>
                   <ul class="nav-list">
                     <li><a href="" class="nav-link">California</a></li>
                     <li><a href="" class="nav-link">Oregon</a></li>
@@ -109,7 +132,7 @@
                 </div>
 
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Other</h4>
+                  <a href="#" class="submenu mb-12">Other</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Kosher Wines</a></li>
                     <li><a href="#" class="nav-link">Sweet Wines</a></li>
@@ -118,7 +141,7 @@
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Popular White Grapes</h4>
+                  <a href="#" class="submenu mb-12">Popular White Grapes</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Chardonnay</a></li>
                     <li><a href="#" class="nav-link">Sauvignon Blanc</a></li>
@@ -127,7 +150,7 @@
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Old World Wines</h4>
+                  <a href="#" class="submenu mb-12">Old World Wines</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Bordeaux</a></li>
                     <li><a href="#" class="nav-link">Burgundy</a></li>
@@ -138,7 +161,7 @@
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Sparkling Wines</h4>
+                  <a href="#" class="submenu mb-12">Sparkling Wines</a>
 
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Champagne</a></li>
@@ -149,7 +172,7 @@
                 </div>
 
                 <div class="dropdown-item">
-                  <h4>Merchant's Picks</h4>
+                  <a href="#" class="submenu mb-12">Merchant's Picks</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Recent Features</a></li>
                   </ul>
@@ -157,7 +180,7 @@
               </div>
             </li>
             <li>
-              <button class="dropdown-btn">
+              <button class="dropdown-btn" data-spirits="">
                 Spirits
                 <svg
                   class="icon-down"
@@ -176,7 +199,7 @@
               </button>
               <div class="dropdown-list">
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Whiskeys</h4>
+                  <a href="#" class="submenu mb-12">Whiskeys</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Scotch Whiskies</a></li>
                     <li><a href="#" class="nav-link">Irish Whiskeys</a></li>
@@ -186,7 +209,7 @@
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Additional Spirits</h4>
+                  <a href="#" class="submenu mb-12">Additional Spirits</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Vodka</a></li>
                     <li><a href="#" class="nav-link">Gin</a></li>
@@ -218,7 +241,7 @@
 
               <div class="dropdown-list">
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Craft Beer & Ciders</h4>
+                  <a href="#" class="submenu mb-12">Craft Beer & Ciders</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Domestic Beer</a></li>
                     <li><a href="#" class="nav-link">Imported Beer</a></li>
@@ -227,7 +250,7 @@
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Olive Oil</h4>
+                  <a href="#" class="submenu mb-12">Olive Oil</a>
                   <ul class="nav-list">
                     <li>
                       <a href="#" class="nav-link">Domestic Olive Oil</a>
@@ -238,13 +261,13 @@
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Balsamic Vinegar</h4>
+                  <a href="#" class="submenu mb-12">Balsamic Vinegar</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">Imported Vinegar</a></li>
                   </ul>
                 </div>
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Food & Wine Pairing</h4>
+                  <a href="#" class="submenu mb-12">Food & Wine Pairing</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">What Grows</a></li>
                     <li><a href="#" class="nav-link">Together Goes </a></li>
@@ -273,7 +296,7 @@
               </button>
               <div class="dropdown-list">
                 <div class="dropdown-item">
-                  <h4 class="mb-12">Gift Options</h4>
+                  <a href="#" class="submenu mb-12">Gift Options</a>
                   <ul class="nav-list">
                     <li><a href="#" class="nav-link">E-Gift Cards</a></li>
                     <li>
