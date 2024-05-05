@@ -199,6 +199,15 @@ h3 {
 
 }
 
+@media(min-width:45rem) and (max-width:60rem) {
+
+    .dropdown-btn:focus~.dropdown-list,
+    .dropdown-list:focus {
+        display: grid;
+    }
+
+}
+
 .nav__link--header {
     text-decoration: none;
     color: var(--clr-neutral-800);
@@ -396,6 +405,14 @@ h3 {
     font-family: var(--ff-title);
 }
 
+@media(min-width: 45rem) and (max-width: 60rem) {
+
+    .dropdown-btn:hover,
+    .dropdown-btn:focus-visible {
+        border-bottom: 2px solid var(--clr-primary-900);
+    }
+}
+
 @media(min-width: 45rem) {
     .hero__title {
         font-size: 4.375rem;
@@ -415,7 +432,7 @@ h3 {
 }
 
 .merchant__pick__lead {
-    padding: 2rem 2rem;
+    padding: 2rem 0.25rem;
 }
 
 
@@ -518,11 +535,32 @@ h3 {
 }
 
 @media(min-width:45rem) {
+    .merchant__pick {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
 
-    #merchantPick,
-    #featured,
+@media(min-width:45rem) and (max-width:45rem) {
+
     #essentials,
-    #followUs {
+    #merchantPick {
+        display: grid;
+        grid-auto-flow: row;
+    }
+
+    .merchant__pick .lead__image {
+        max-height: 10rem;
+    }
+
+
+}
+
+@media(min-width:60rem) {
+
+    #essentials,
+    #merchantPick {
         display: grid;
         grid-auto-flow: column;
     }
@@ -530,6 +568,26 @@ h3 {
     #merchantPick {
         grid-template-columns: 1fr 2fr;
     }
+
+
+    .merchant__pick {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+}
+
+@media(min-width:45rem) {
+
+
+    #featured,
+    #followUs {
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+
 
     #featured {
         grid-auto-columns: 1fr;
@@ -547,11 +605,6 @@ h3 {
         bottom: 10rem;
     }
 
-    .merchant__pick {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-    }
 
     #followUs {
         grid-template-columns: 1fr 1.5fr;
