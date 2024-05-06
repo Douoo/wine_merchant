@@ -472,6 +472,17 @@ h3 {
 
 }
 
+@media(min-width:60rem) {
+    .hero {
+        min-height: 700px;
+    }
+
+    #merchantPick {
+        width: min(1110px, 85%);
+        margin-inline: auto;
+    }
+}
+
 .lead__image {
     min-height: 15rem;
     object-fit: cover;
