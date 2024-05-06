@@ -7,7 +7,8 @@ const navDropdown = document.querySelector(".nav--header.nav-dropdown");
 const navBackBtn = document.querySelector(".back-btn");
 const activeSubMenus = document.querySelectorAll(".active");
 
-const searchBtn = document.querySelector("[data-search]");
+const searchBtnMobile = document.querySelector("[data-search]");
+const searchBtnDesktop = document.querySelector("[data-search-desktop]");
 const searchField = document.querySelector("[data-search-field]");
 
 navbarToggle.addEventListener("click", function () {
@@ -56,12 +57,19 @@ dropdownLinks.forEach((dropdownBtn) => {
   });
 });
 
-searchBtn.onclick = () => {
+searchBtnMobile.onclick = () => {
+  searchField.classList.toggle("hidden");
+  navbar.classList.toggle("hidden");
+};
+
+searchBtnDesktop.onclick = () => {
+  console.log("tes");
   searchField.classList.toggle("hidden");
   navbar.classList.toggle("hidden");
 };
 
 searchField.addEventListener("click", function (e) {
+  console.log("Test");
   const clickedEl = e.target;
   if (
     clickedEl.tagName == "INPUT" ||

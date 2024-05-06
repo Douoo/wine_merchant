@@ -164,6 +164,12 @@ h3 {
     }
 }
 
+@media(min-width:45rem) {
+    .search-container {
+        padding-block: 2rem;
+    }
+}
+
 .nav-logo {
     font-family: "Cormorant Garamond", serif;
     font-size: 1.5rem;
@@ -421,11 +427,11 @@ h3 {
 }
 
 .hero {
-    margin-top: 7rem;
     background-image: url("assets/images/hero.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 3rem;
     padding-block: 6rem;
 }
 
@@ -456,6 +462,10 @@ h3 {
 }
 
 @media(min-width: 45rem) {
+    .hero {
+        margin-top: 7rem;
+    }
+
     .hero__title {
         font-size: 4.375rem;
     }
