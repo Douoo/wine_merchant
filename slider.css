@@ -1,0 +1,47 @@
+.slider {
+    min-height: 800px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.slide {
+    position: absolute;
+    min-height: 800px;
+    width: 100%;
+    transition: transform 1s;
+}
+
+@media(min-width:45rem) and (max-width:60rem) {
+
+    .slider,
+    .slide {
+        min-height: 460px;
+    }
+}
+
+@media(min-width:60rem) {
+
+    .slider,
+    .slide {
+        min-height: 480px;
+    }
+}
+
+.btn-slide {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    cursor: pointer;
+}
+
+.slide-left {
+    left: 5%
+}
+
+.slide-right {
+    right: 5%
+}

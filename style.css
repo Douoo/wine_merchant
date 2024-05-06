@@ -465,6 +465,8 @@ h3 {
 .lead__image {
     min-height: 15rem;
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #merchantPick {
@@ -582,6 +584,10 @@ h3 {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
+
+    .panel {
+        max-width: 22rem;
+    }
 }
 
 @media(min-width:45rem) and (max-width:45rem) {
@@ -605,6 +611,7 @@ h3 {
     #merchantPick {
         display: grid;
         grid-auto-flow: column;
+        grid-template-columns: 1fr 2fr;
     }
 
     #merchantPick {
@@ -662,25 +669,6 @@ h3 {
         overflow-wrap: break-word;
         text-overflow: ellipsis;
     }
-
-    /* 
-    .merchant__pick__lead .title::before,
-    .card__title::before {
-        position: absolute;
-        content: '...';
-        bottom: 0;
-        right: 0;
-    }
-
-    .merchant__pick__lead .title::after,
-    .card__title::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        width: 1rem;
-        height: 1rem;
-
-    } */
 
     .merchant__pick__lead .title {
         font-size: 1.5rem;
@@ -1147,7 +1135,7 @@ h3 {
 
 
     .text-lead {
-        font-size: 1.75rem;
+        font-size: 1rem;
     }
 
     .btn {
