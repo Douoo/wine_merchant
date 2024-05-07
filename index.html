@@ -18,7 +18,7 @@
       <div class="navbar-container">
         <div style="--max-width: 95%" class="navbar | container">
           <div
-            style="--space-in-between: 0.25rem"
+            style="--space-in-between: 0.5rem"
             class="d-lg-none d-flex align-items-center"
           >
             <button class="navbar-toggle icon-btn d-lg-none" data-toggle="">
@@ -44,10 +44,13 @@
             </a>
           </div>
 
-          <a href="/" class="nav-logo">EWM</a>
+          <a href="/" class="nav-logo"
+            ><span class="d-lg-none">EWM</span>
+            <span class="d-md-none d-sm-none">ENGLEWOOD WINE MERCHANTS</span></a
+          >
 
           <div
-            style="--space-in-between: 0.5rem"
+            style="--space-in-between: 1rem"
             class="d-lg-none d-flex align-items-center"
           >
             <button class="icon-btn icon-cart" data-count="0">
@@ -76,7 +79,7 @@
               <li>
                 <button class="dropdown-btn" data-shop="">
                   Shop Wines
-                  <svg
+                  <!-- <svg
                     class="icon-down"
                     aria-hidden="true"
                     focusable="false"
@@ -89,7 +92,7 @@
                       stroke-width="2.75"
                       d="m1.57 1.59 12.76 12.77L27.1 1.59"
                     ></path>
-                  </svg>
+                  </svg> -->
                 </button>
                 <div class="dropdown-list">
                   <div class="dropdown-item">
@@ -177,7 +180,7 @@
               <li>
                 <button class="dropdown-btn" data-spirits="">
                   Spirits
-                  <svg
+                  <!-- <svg
                     class="icon-down"
                     aria-hidden="true"
                     focusable="false"
@@ -190,7 +193,7 @@
                       stroke-width="2.75"
                       d="m1.57 1.59 12.76 12.77L27.1 1.59"
                     ></path>
-                  </svg>
+                  </svg> -->
                 </button>
                 <div class="dropdown-list">
                   <div class="dropdown-item">
@@ -220,7 +223,7 @@
               <li>
                 <button class="dropdown-btn">
                   Pantry
-                  <svg
+                  <!-- <svg
                     class="icon-down"
                     aria-hidden="true"
                     focusable="false"
@@ -233,7 +236,7 @@
                       stroke-width="2.75"
                       d="m1.57 1.59 12.76 12.77L27.1 1.59"
                     ></path>
-                  </svg>
+                  </svg> -->
                 </button>
 
                 <div class="dropdown-list">
@@ -276,7 +279,7 @@
               <li>
                 <button class="dropdown-btn">
                   Gifts
-                  <svg
+                  <!-- <svg
                     class="icon-down"
                     aria-hidden="true"
                     focusable="false"
@@ -289,7 +292,7 @@
                       stroke-width="2.75"
                       d="m1.57 1.59 12.76 12.77L27.1 1.59"
                     ></path>
-                  </svg>
+                  </svg> -->
                 </button>
                 <div class="dropdown-list">
                   <div class="dropdown-item">
@@ -374,14 +377,24 @@
               </li>
             </ul>
             <ul class="nav--header align-items-center d-sm-none">
-              <li>
-                <a href="#" data-search-desktop="">
-                  <img
-                    class="icon-search"
-                    src="assets/images/search-outline.svg"
-                    alt=""
+              <li class="">
+                <div class="form-control">
+                  <label for="search"></label>
+                  <input
+                    class="input-bordered"
+                    name="search"
+                    id="search"
+                    type="text"
+                    placeholder="Search..."
                   />
-                </a>
+                  <a href="#" data-search="" class="icon-search">
+                    <img
+                      class="icon-search"
+                      src="assets/images/search-outline.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </li>
               <li>
                 <a href="#location" class="nav-link"
