@@ -654,6 +654,7 @@ h3 {
 
 .card__img {
     width: 100%;
+    min-height: 400px;
     object-fit: cover;
     aspect-ratio: 1/1;
 }
