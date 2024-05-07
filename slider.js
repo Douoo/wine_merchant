@@ -37,6 +37,7 @@ moveSlideTo(0);
 slideRight.addEventListener("click", nextSlide);
 slideLeft.addEventListener("click", prevSlide);
 
+//The following code is for the slider to work on gesture detection
 let startX, startY;
 
 slider.addEventListener("touchstart", function (event) {
