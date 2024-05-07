@@ -12,6 +12,8 @@
     --ff-body: "Montserrat", sans-serif;
     --ff-title: "Lora", serif;
 
+    --container-width: calc(100% - 1.5rem);
+
     --fw-bold: 700;
     --fw-regular: 400;
 
@@ -445,12 +447,27 @@ h3 {
 }
 
 .hero__text {
-    max-width: 50rem;
+    max-width: 45rem;
 }
 
 .hero__title {
     font-size: var(--fs-heading-lg);
     font-family: var(--ff-title);
+}
+
+@media(min-width: 45rem) {
+    .hero {
+        margin-top: 7rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .hero__title {
+        font-size: 4.375rem;
+    }
+
+
 }
 
 @media(min-width: 45rem) and (max-width: 60rem) {
@@ -459,27 +476,13 @@ h3 {
     .dropdown-btn:focus-visible {
         border-bottom: 2px solid var(--clr-primary-900);
     }
-}
-
-@media(min-width: 45rem) {
-    .hero {
-        margin-top: 7rem;
-    }
-
-    .hero__title {
-        font-size: 4.375rem;
-    }
 
 }
+
 
 @media(min-width:60rem) {
     .hero {
         min-height: 700px;
-    }
-
-    #merchantPick {
-        width: min(1110px, 85%);
-        margin-inline: auto;
     }
 }
 
@@ -491,13 +494,58 @@ h3 {
 }
 
 #merchantPick {
+    position: relative;
+}
+
+.pick__card {
+    position: relative;
+}
+
+.merchant__pick__container {
     display: grid;
     gap: 1rem;
     margin-block: 3rem;
 }
 
+@media(max-width:45rem) {
+
+    .merchant__pick__container .panel {
+        width: 85%;
+        margin-inline: auto;
+    }
+
+    .merchant__pick__container .lead__image {
+        max-height: 400px;
+    }
+
+    .merchant__pick__lead {
+        max-height: 400px;
+    }
+}
+
+@media(min-width: 45rem) {
+    .merchant__pick__container {
+        width: min(var(--container-width), 85%);
+        margin-inline: auto;
+    }
+
+}
+
+@media(min-width: 45rem) and (max-width: 60rem) {
+
+
+    .merchant__pick__container .panel {
+        margin-left: 2rem;
+    }
+
+}
+
 .merchant__pick__lead {
     padding: 2rem 0.25rem;
+    background-image: url(assets/images/merchant_pick_bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 
@@ -626,7 +674,7 @@ h3 {
 @media(min-width:45rem) and (max-width:45rem) {
 
     #essentials,
-    #merchantPick {
+    .merchant__pick__container {
         display: grid;
         grid-auto-flow: row;
     }
@@ -641,13 +689,13 @@ h3 {
 @media(min-width:60rem) {
 
     #essentials,
-    #merchantPick {
+    .merchant__pick__container {
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: 1fr 2fr;
     }
 
-    #merchantPick {
+    .merchant__pick__container {
         grid-template-columns: 1fr 2fr;
     }
 
@@ -892,18 +940,65 @@ h3 {
     outline: none;
 }
 
-.collapsable {
+.collapsable-title {
+    position: relative;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--clr-neutral-600);
+    cursor: pointer;
 }
 
 
 
+@media(max-width:45rem) {
+    .collapsable-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 500ms;
+    }
+
+    .collapsable-content>nav {
+        overflow: hidden;
+    }
+
+    .collapsable.toggle .collapsable-content {
+        grid-template-rows: 1fr;
+        transition: grid-template-rows 0.2s ease-out;
+    }
+
+    .collapsable-title::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0.35rem;
+        width: 1rem;
+        height: 1rem;
+        background-image: url(assets/images/arrow-back.svg);
+        background-repeat: no-repeat;
+        transform: rotate(270deg);
+        transition: transform 0.2s ease-out;
+    }
+
+    .collapsable.toggle .collapsable-title::after {
+        transform: rotate(180deg);
+        transition: transform 0.2s ease-out;
+    }
+}
+
 /* Utility classes  */
 .container {
-    width: min(1110px, 85%);
+    width: min(var(--container-width), var(--max-width, 90%));
     margin-inline: auto;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 .list-unstyled {

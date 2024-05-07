@@ -39,9 +39,24 @@
 }
 
 .slide-left {
-    left: 5%
+    left: -6.75%;
+    top: 40%;
+    background-image: url(assets/images/arrow-next.svg);
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
 }
 
 .slide-right {
-    right: 5%
+    right: -6.75%;
+    top: 40%;
+    background-image: url(assets/images/arrow-next.svg);
+    background-repeat: no-repeat;
+}
+
+@media(min-width: 60rem) {
+    .slide-left {}
+
+    .slide-right {
+        /* right: -2.5rem !important; */
+    }
 }

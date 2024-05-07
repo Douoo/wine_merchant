@@ -82,3 +82,15 @@ searchField.addEventListener("click", function (e) {
     navbar.classList.toggle("hidden");
   }
 });
+
+const accordion = document.querySelector(".footer");
+
+accordion.addEventListener("click", (e) => {
+  const activePanel = e.target.closest(".collapsable");
+  if (!activePanel) return;
+  toggleAccordion(activePanel);
+});
+
+function toggleAccordion(panelToActivate) {
+  panelToActivate.classList.toggle("toggle");
+}
