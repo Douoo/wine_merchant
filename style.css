@@ -297,7 +297,7 @@ h3 {
     color: var(--clr-neutral-800);
 }
 
-@media(max-width: 60rem) {
+@media(max-width: 70rem) {
     .header {
         background-color: var(--clr-neutral-400);
     }
@@ -467,7 +467,7 @@ h3 {
     font-family: var(--ff-title);
 }
 
-@media(min-width: 60rem) {
+@media(min-width: 70rem) {
     .hero {
         margin-top: 7rem;
         display: flex;
@@ -1323,6 +1323,12 @@ h3 {
 
 @media(min-width: 60rem) {
     .d-lg-none {
+        display: none;
+    }
+}
+
+@media(min-width:70rem){
+    .d-xl-none {
         display: none;
     }
 }
