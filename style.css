@@ -503,6 +503,7 @@ h3 {
 
 .merchant__pick__container {
     display: grid;
+    width: 100%;
     gap: 1rem;
     margin-block: 3rem;
 }
@@ -510,7 +511,7 @@ h3 {
 @media(max-width:45rem) {
 
     .merchant__pick__container .panel {
-        width: 85%;
+        /* width: 85%; */
         margin-inline: auto;
     }
 
@@ -525,7 +526,7 @@ h3 {
 
 @media(min-width: 45rem) {
     .merchant__pick__container {
-        width: min(var(--container-width), 85%);
+        width: min(var(--container-width), 90%);
         margin-inline: auto;
     }
 
@@ -535,7 +536,7 @@ h3 {
 
 
     .merchant__pick__container .panel {
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
     }
 
 }
@@ -606,6 +607,7 @@ h3 {
 }
 
 .footer {
+    width: 100%;
     padding-block: 2rem 1.5rem;
     display: grid;
 }
