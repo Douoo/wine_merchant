@@ -36,3 +36,22 @@ const prevSlide = () => {
 moveSlideTo(0);
 slideRight.addEventListener("click", nextSlide);
 slideLeft.addEventListener("click", prevSlide);
+
+let startX, startY;
+
+slider.addEventListener("touchstart", function (event) {
+  console.log("Started");
+  startX = event.touches[0].clientX;
+});
+
+slider.addEventListener("touchmove", function (event) {
+  const currentX = event.touches[0].clientX;
+  const deltaX = currentX - startX;
+  const threshold = 50; // Adjust this value to define minimum swipe distance
+
+  if (deltaX > threshold) {
+    prevSlide();
+  } else if (deltaX < -threshold) {
+    nextSlide();
+  }
+});
