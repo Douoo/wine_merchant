@@ -10,12 +10,16 @@
     width: 100%;
     transition: transform 1s;
 }
+.slider,
+.slide {
+    overflow: hidden;
+}
 
 @media(min-width:45rem) and (max-width:60rem) {
 
     .slider,
     .slide {
-        min-height: 460px;
+        min-height: 400px;
     }
 }
 
@@ -23,7 +27,8 @@
 
     .slider,
     .slide {
-        min-height: 480px;
+        min-height: 400px;
+        overflow: hidden;
     }
 }
 
@@ -53,10 +58,12 @@
     background-repeat: no-repeat;
 }
 
-@media(min-width: 60rem) {
-    .slide-left {}
+@media(min-width: 45rem) and (max-width:60rem) {
+    .slide-left {
+        left: -2rem;
+    }
 
     .slide-right {
-        /* right: -2.5rem !important; */
+        right: -2rem;
     }
 }

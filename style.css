@@ -511,7 +511,7 @@ h3 {
 @media(max-width:45rem) {
 
     .merchant__pick__container .panel {
-        /* width: 85%; */
+        width: 85%;
         margin-inline: auto;
     }
 
@@ -519,9 +519,6 @@ h3 {
         max-height: 400px;
     }
 
-    .merchant__pick__lead {
-        max-height: 400px;
-    }
 }
 
 @media(min-width: 45rem) {
@@ -542,12 +539,24 @@ h3 {
 }
 
 .merchant__pick__lead {
+    position: relative;
     padding: 2rem 0.25rem;
+    z-index: 50;
+    max-height: 400px;
+
+}
+
+.merchant__pick__lead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-image: url(assets/images/merchant_pick_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    z-index: -1;
 }
+
 
 
 .score {
@@ -661,6 +670,7 @@ h3 {
     justify-content: center;
 }
 
+
 @media(min-width:45rem) {
     .merchant__pick {
         display: grid;
@@ -682,7 +692,11 @@ h3 {
     }
 
     .merchant__pick .lead__image {
-        max-height: 10rem;
+        min-height: 10rem;
+    }
+
+    .merchant__pick .merchant__pick__lead {
+        min-height: 10rem;
     }
 
 
@@ -739,7 +753,7 @@ h3 {
 
 
     #followUs {
-        grid-template-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 2fr;
     }
 
     .item-list {
@@ -759,6 +773,22 @@ h3 {
         margin-inline: auto;
         overflow-wrap: break-word !important;
         text-overflow: ellipsis !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 215px;
+    }
+
+    .merchant__pick__description {
+        max-width: 215px;
+        margin-inline: auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .promo__list {
