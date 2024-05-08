@@ -156,17 +156,14 @@ h3 {
     margin-bottom: 0 !important;
 }
 
-@media(max-width:45rem) {
+@media(max-width:60rem) {
     .search-container .form-control {
         margin-bottom: 0;
     }
 
-    .search-container .form-control .input-bordered {
-        border: 1px solid var(--clr-neutral-600);
-    }
-
     .search-container .form-control .icon-search {
-        top: 0.05rem;
+        width: 1.5rem;
+        top: 0.15rem;
     }
 }
 
