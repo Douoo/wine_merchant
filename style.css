@@ -697,12 +697,21 @@ h3 {
     }
 }
 
-@media(min-width:45rem) and (max-width:45rem) {
+@media(min-width:45rem) and (max-width:60rem) {
 
     #essentials,
     .merchant__pick__container {
         display: grid;
         grid-auto-flow: row;
+    }
+
+    .merchant__pick {
+        width: 85% !important;
+        margin-inline: auto;
+    }
+
+    #merchantPick .panel {
+        margin-left: 4rem;
     }
 
     .merchant__pick .lead__image {
@@ -712,8 +721,6 @@ h3 {
     .merchant__pick .merchant__pick__lead {
         min-height: 10rem;
     }
-
-
 
 }
 
@@ -732,9 +739,8 @@ h3 {
 
 
     .merchant__pick {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
+        position: relative;
+        right: 3rem;
     }
 
 }
