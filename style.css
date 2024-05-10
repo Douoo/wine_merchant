@@ -567,6 +567,29 @@ h3 {
 }
 
 
+.merchant__pick__lead .title {
+    font-size: 1.5rem;
+    inline-size: 300px !important;
+    margin-inline: auto;
+    overflow-wrap: break-word !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 215px;
+}
+
+.merchant__pick__description {
+    max-width: 215px;
+    margin-inline: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .score {
     display: flex;
@@ -786,29 +809,6 @@ h3 {
         text-overflow: ellipsis;
     }
 
-    .merchant__pick__lead .title {
-        font-size: 1.5rem;
-        inline-size: 300px !important;
-        margin-inline: auto;
-        overflow-wrap: break-word !important;
-        text-overflow: ellipsis !important;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 215px;
-    }
-
-    .merchant__pick__description {
-        max-width: 215px;
-        margin-inline: auto;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
     .promo__list {
         grid-auto-flow: column;
